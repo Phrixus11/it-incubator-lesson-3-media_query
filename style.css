@@ -1,0 +1,261 @@
+* {
+    margin: 0; /* внешние отступы */  
+    padding: 0; /* внутренние отступы */
+    box-sizing: border-box; /* границы и внутренние отступы теперь не увеличивают размер элементов */
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    letter-spacing: 0.01em;
+    min-width: 375px;
+}
+
+ul {
+    list-style: none;
+}
+
+.main {
+    background-color: #eff2f9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 1170px;
+    min-height: 800px;
+    box-shadow: 20px 20px 40px 0 rgba(81, 91, 117, 0.25);
+    background-color: #fff;
+    padding: 60px 0 70px 0;
+    display: flex;
+    margin: 40px;
+}
+
+.images-block {
+    border-right: 2px solid rgba(20, 20, 20, 0.15);
+    min-width: 540px;
+    display: flex;   
+    flex-direction: column;
+}
+
+.main-image-wrapper{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.previews-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.preview {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.preview.selected, .preview:hover {
+    box-shadow: 8px 8px 16px 0 rgba(81, 91, 117, 0.25);
+}
+
+
+.description-block {
+    padding: 0 60px;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    color: rgba(20, 20, 20, 0.9);
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(20, 20, 20, 0.4);
+}
+
+.text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.66667;
+    color: rgba(20, 20, 20, 0.7);
+    margin: 65px 0 65px;
+}
+
+.block-title {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: rgba(20, 20, 20, 0.4);
+    margin-bottom: 20px;
+}
+
+.colors-block {
+    margin-bottom: 65px;
+}
+
+.colors-list {
+    display: flex;
+    gap: 33px;
+}
+
+.circle {
+    border-radius: 100%;
+    box-shadow: 2px 2px 4px 0 rgba(81, 91, 117, 0.25);
+    width: 16px;
+    height: 16px;
+}
+
+.blue {
+    background-color: #013c7d;
+}
+.green {
+    background-color: #63cba7;
+}
+.red {
+    background-color: #d52f29;
+}
+.black {
+    background-color: #141414;
+}
+.yellow {
+    background-color: #f2c723;
+}
+
+.color-item {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+    background-color:#fff; 
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+li.selected, li:hover {
+    box-shadow: 2px 2px 6px 0 rgba(81, 91, 117, 0.25);
+    background-color: #fff;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.wrapper > div {
+    flex-grow: 1;
+}
+
+#quantity {
+    width: 80px;
+    height: 24px;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgba(20, 20, 20, 0.8);
+    appearance: none;
+    background-image: url(./assects/images/ph_caret-down-bold.svg);
+    background-repeat: no-repeat;
+    background-position: right 0 top 50%;
+    border: none;
+    font-family: "Rubik", sans-serif;
+}
+
+.price {
+    
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgba(20, 20, 20, 0.8);
+}
+
+.btn {
+    width: 100%;
+    height: 70px;
+    background-color: #141414;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 75px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid rgb(0, 0, 0);
+    transform: scale(1.1);
+    /* transform: skewX(-15deg); */
+}
+
+@media screen and (max-width: 1200px) {
+    .card {
+        width: 690px;
+        flex-direction: column;
+
+    }
+
+    .images-block {
+        border-bottom: 2px solid rgba(20, 20, 20, 0.15);
+        border-right: none;
+        padding-bottom: 70px;
+        margin-bottom: 60px;
+    }
+
+    .main-image-wrapper img {
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .card {
+        width: 346px;
+        padding: 20px 0 60 0;
+        margin: 15px 15px 40px;
+    }
+
+    .description-block {
+        padding: 60px 20px 0;
+    }
+
+    .images-block {
+        min-width: auto;
+    }
+
+    .main-image-wrapper img {
+        margin-bottom: 60px;
+        max-width: 250px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+    
+    .subtitle {
+        font-size: 14px;
+    }
+    
+    .text {
+        font-size: 16px;
+        margin: 50px 0 55px;
+    }
+
+    .btn {
+        margin-top: 65px;
+    }
+}
